@@ -318,6 +318,71 @@ body {
     color: #333;
 }
 
+/* ===== TECH STACK SECTION ===== */
+.tech-stack-section {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-2xl);
+    border-top: var(--border-width) solid var(--color-border);
+}
+
+.tech-stack-title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tech-item {
+    background-color: var(--color-white);
+    border: var(--border-width) solid var(--color-border);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    box-shadow: 4px 4px 0px var(--color-border);
+    transition: none;
+    min-height: 120px;
+}
+
+.tech-item:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--color-border);
+    background-color: var(--color-accent);
+}
+
+.tech-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-light);
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 0px var(--color-border);
+}
+
+.tech-icon .material-symbols-outlined {
+    font-size: 28px;
+    color: var(--color-dark);
+}
+
+.tech-name {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-dark);
+}
+
 /* ===== PROJECTS SECTION ===== */
 .projects {
     padding: var(--spacing-2xl) 0;
@@ -769,6 +834,10 @@ body {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+    
+    .tech-stack-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
 
 @media (max-width: 480px) {
@@ -793,5 +862,19 @@ body {
     
     .btn {
         width: 100%;
+    }
+    
+    .tech-stack-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: var(--spacing-sm);
+    }
+    
+    .tech-item {
+        padding: var(--spacing-sm);
+        min-height: 100px;
+    }
+    
+    .tech-name {
+        font-size: 11px;
     }
 }
