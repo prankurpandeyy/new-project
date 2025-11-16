@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Custom utility classes for neubrutalism design */
+@layer utilities {
+  .shadow-brutal {
+    box-shadow: 8px 8px 0px #000000;
+  }
+  
+  .shadow-brutal-sm {
+    box-shadow: 4px 4px 0px #000000;
+  }
+  
+  .shadow-brutal-md {
+    box-shadow: 6px 6px 0px #000000;
+  }
+  
+  .border-brutal {
+    border-width: 4px;
+    border-color: #000000;
+  }
+  
+  .transition-brutal {
+    transition: none;
+  }
+}
